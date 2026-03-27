@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  bmdesk-update-server:
+    build: .
+    container_name: bmdesk-update-server
+    ports:
+      - "5119:5119"
+    volumes:
+      # Monta a pasta de instaladores
+      - ./instaladores:/app/instaladores
+      # Monta o arquivo de versões (pra editar sem rebuild)
+      - ./versoes.json:/app/versoes.json
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5119/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - bmdesk-network
+
+networks:
+  bmdesk-network:
+    driver: bridge

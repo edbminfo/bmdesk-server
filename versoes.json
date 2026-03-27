@@ -1,0 +1,30 @@
+{
+  "versao_atual": "1.4.4",
+  "nome_app": "bmdesk",
+  "data_lancamento": "2025-12-19",
+  "changelog": [
+    "Servidor customizado configurado",
+    "Sistema de atualizações automáticas",
+    "Suporte para Windows, Android e Sunmi"
+  ],
+  "downloads": {
+    "windows": {
+      "arquivo": "bmdesk-1.4.4-x86_64.exe",
+      "tamanho": "22 MB",
+      "checksum": "",
+      "plataforma": "Windows"
+    },
+    "celular": {
+      "arquivo": "bmdesk-1.4.4-arm64-v8a.apk",
+      "tamanho": "23 MB",
+      "checksum": "",
+      "plataforma": "Android"
+    },
+    "sunmi": {
+      "arquivo": "bmdesk-1.4.4-sunmi-armeabi-v7a.apk",
+      "tamanho": "21 MB",
+      "checksum": "",
+      "plataforma": "Sunmi"
+    }
+  }
+}
